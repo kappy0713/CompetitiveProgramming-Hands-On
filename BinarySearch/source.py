@@ -2,8 +2,12 @@ n, x = map(int, input().split())
 a = list(map(int, input().split()))
 
 # 探索アルゴリズム
-# この探索アルゴリズムは"全探索"のため,"二分探索"の実装に変更してください
-# 問題自体を解くことは可能で,実行制限時間にも間に合います
-for i in range(n):
-  if a[i] == x:
-    exit(print(i + 1))
+left, right = 0, n-1
+while left <= right:
+    middle = (left + right) // 2
+    if a[middle] > x:
+        right = middle - 1
+    elif a[middle] < x:
+        left = middle + 1
+    else:
+        exit(print(middle+1))

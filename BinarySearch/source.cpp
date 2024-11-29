@@ -10,11 +10,15 @@ int main() {
     }
 
     // 探索アルゴリズム
-    // この探索アルゴリズムは"全探索"のため,"二分探索"の実装に変更してください
-    // 問題自体を解くことは可能で,実行制限時間にも間に合います
-    for (int i = 0; i < n; ++i) {
-        if (a[i] == x) {
-            std::cout << i + 1 << std::endl;
+    int left = 0, right = n - 1;
+    while (left <= right) {
+        int middle = left + (right - left) / 2;
+        if (a[middle] > x) {
+            right = middle - 1;
+        } else if (a[middle] < x) {
+            left = middle + 1;
+        } else {
+            std::cout << middle + 1 << std::endl;
             return 0;
         }
     }
