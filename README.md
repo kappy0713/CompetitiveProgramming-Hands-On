@@ -2,6 +2,13 @@
 
 競技プログラミング勉強会のハンズオン用リポジトリ
 
+#### 取り扱う問題
+1. **二分探索**
+
+   [Binary Search 1](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_k)
+2. **累積和**
+   
+   [How Many Guests?](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_ai)
 #### ディレクトリ構成
 <pre>
 .
